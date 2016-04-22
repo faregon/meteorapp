@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA,SAAS,MAAT,QAAuB,eAAvB;AACA,OAAO,yBAAP;;AAEA,OAAO,OAAP,CAAe,MAAM;;AAEpB,CAFD","file":"main-compiled.js","sourcesContent":["import { Meteor } from 'meteor/meteor';\nimport '../imports/api/tasks.js';\n\nMeteor.startup(() => {\n  // code to run on server at startup\n});\n"]}

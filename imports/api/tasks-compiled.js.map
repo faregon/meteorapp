@@ -1,0 +1,1 @@
+{"version":3,"sources":["tasks.js"],"names":[],"mappings":";;;AAGA,SAAS,KAAT,QAAsB,cAAtB;;AAEA,OAAO,MAAM,QAAQ,IAAI,MAAM,UAAV,CAAqB,OAArB,CAAd","file":"tasks-compiled.js","sourcesContent":["/**\r\n * Created by D'oh on 4/22/16.\r\n */\r\nimport { Mongo } from 'meteor/mongo';\r\n\r\nexport const Tasks = new Mongo.Collection('tasks');"]}
