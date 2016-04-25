@@ -35,12 +35,9 @@ Template.body.events({
         const text = target.text.value;
 
         // Insert a task into the collection
-        Tasks.insert({
-            text,
-            createdAt: new Date() });
+        Meteor.call('task.insert', text);
 
         // Clear form
-        // current time
         target.text.value = '';
     },
     'change .hide-completed input'(event, instance) {

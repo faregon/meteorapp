@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA,OAAO,uBAAP","file":"main-compiled.js","sourcesContent":["import '../imports/ui/body.js';"]}
+{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA,OAAO,oCAAP;AACA,OAAO,uBAAP","file":"main-compiled.js","sourcesContent":["import '../imports/startup/accounts-config';\r\nimport '../imports/ui/body.js';\r\n"]}
