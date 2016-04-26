@@ -28,8 +28,8 @@ Meteor.methods({
         Tasks.insert({
             text,
             createdAt: new Date(),
-            owner: this.userId(),
-            username: Meteor.user(this.userId).username
+            owner: Meteor.userId(),
+            username: Meteor.user().username
         });
     },
     'tasks.remove'(taskId) {
