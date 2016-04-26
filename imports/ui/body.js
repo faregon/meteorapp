@@ -34,7 +34,7 @@ Template.body.events({
         const text = target.text.value;
 
         // Insert a task into the collection
-Meteor.call('task.insert', text);
+        Meteor.call('tasks.insert', text);
 
         // Clear form
         target.text.value = '';
