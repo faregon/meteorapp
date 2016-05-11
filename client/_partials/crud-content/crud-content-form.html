@@ -2,23 +2,23 @@
   <div class="row">
         <h1>New Post</h1>
         <form>
-          <div class="form-group">
+          <div class="new-content form-group">
             <label for="title">Title
-              <input type="text" id="title" name="title" placeholder="Title" ng-model="content.title" autofocus="autofocus" class="form-control"/>
+              <input type="text" id="title" name="title" placeholder="Title" autofocus="autofocus" class="form-control"/>
             </label>
           </div>
           <div class="form-group">
             <label for="headline">Headline
-              <input type="headline" id="headline" name="headline" placeholder="Headline" ng-model="content.headline" class="form-control"/>
+              <input type="text" id="headline" name="headline" placeholder="Headline" class="form-control"/>
             </label>
           </div>
           <div class="form-group">
             <label for="article">Article
               <!--input.form-control(type="article", id="article", name="article", placeholder="Article", ng-model="content.content")-->
-              <textarea rows="4" cols="50" id="article" name="article" placeholder="Article" ng-model="content.content" class="form-control"></textarea>
+              <textarea rows="4" cols="50" id="article" name="article" placeholder="Article" class="form-control"></textarea>
             </label>
           </div>
-          <button ng-click="createContent(content)" class="btn btn-small btn-warning">Create Post</button>
+          <button type="submit" class="btn btn-small btn-warning">Create Post</button>
         </form>
     </div>
 </template>
