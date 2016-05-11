@@ -1,0 +1,42 @@
+<template name="contentModal">
+  <div class="modal fade" id="contentModal">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          {{#if _id}}
+              <h4 class="modal-title">Edit article: {{ _id }}</h4>
+          {{else}}
+              <h4 class="modal-title">Create Article</h4>
+          {{/if}}
+        </div>
+        <div class="modal-body">
+
+         <div class="form-group">
+            <label for="title">Title
+              <input type="text" id="contentTitle" name="contentTitle" 
+                     placeholder="Title" value={{ title }}  
+                     autofocus="autofocus" class="form-control" />
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="headline">Headline
+              <input type="text" id="contentHeadline" name="contentHeadline" 
+                    placeholder="Headline" value={{ headline }} 
+                    class="form-control"/>
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="article">Article
+              <textarea rows="4" cols="50" id="contentArticle" name="contentArticle" 
+                        placeholder="Article" class="form-control">{{ body }}</textarea>
+            </label>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" id="save">Save</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

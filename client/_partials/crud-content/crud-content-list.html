@@ -1,23 +1,35 @@
 <template name="crudContentList">
    <div class="row">
-    <h1>All Posts</h1>
+    <h1>All Posts <button type="button" class="btn btn-link new-content">New Post</button></h1>
     <table class="table table-bordered">
       <thead>
+        <th>Author</th>
         <th>Title</th>
+        <th>Last Edited</th>
         <th>Actions</th>
       </thead>
       <tbody>
         {{#each articles}}
             <tr>
+              <td>{{ username }}</td>
               <td>{{ title }}</td>
+              <td>
+                  {{#if lastEdited}}
+                    {{ prettifyDate lastEdited }}, {{ lastEditedByUser }}
+                  {{/if}}
+                </td>
               <td class="actions">
-                <button class="btn btn-success btn-block edit">Edit</button>
-                <button class="btn btn-danger btn-block remove">Delete</button>
+                <!-- added pacage to use ionic icon font 
+                https://atmospherejs.com/pagebakers/ionicons-->
+                <button class="btn btn-success btn-block edit"><i class="ion-edit"></i></button>
+                <button class="btn btn-danger btn-block remove"><i class="ion-trash-a"></i></button>
               </td>
             </tr>
         {{/each}}
         
       </tbody>
     </table>
+    
   </div>
 </template>
+
