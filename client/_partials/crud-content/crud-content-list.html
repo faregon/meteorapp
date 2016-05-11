@@ -1,0 +1,20 @@
+<template name="crudContentList">
+   <div class="row">
+    <h1>All Posts</h1>
+    <table ng-model="content" ng-init="getContents()" class="table table-bordered">
+      <thead>
+        <th>Title</th>
+        <th>Actions</th>
+      </thead>
+      <tbody>
+        <tr ng-repeat="content in Contents">
+          <td>{{content.title}}</td>
+          <td class="actions">
+            <button ng-click="deleteContent(content._id)" class="btn btn-success btn-block">Edit</button>
+            <button ng-click="deleteContent(content._id)" class="btn btn-danger btn-block">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>

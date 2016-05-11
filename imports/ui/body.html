@@ -1,27 +1,39 @@
 <body>
-<div class="container">
-    <header>
-        <h1 class="alert-success">Todo List ({{incompleteCount}})</h1>
 
-        <label class="hide-completed">
-            <input type="checkbox" />
-            Hide Completed Tasks
-        </label>
+      <nav class="container">
+        <a href="#todo"> Todo </a>
+        <a href="#CRUDcontent"> CRUD  Content </a>
+      </nav>
+      <div id="todo" class="container">
+        <header>
+            <h1 class="alert-success">Todo List ({{incompleteCount}})</h1>
 
-        {{> loginButtons }}
+            <label class="hide-completed">
+                <input type="checkbox" />
+                Hide Completed Tasks
+            </label>
 
-        {{#if currentUser}}
-        <form class="new-task">
-            <input type="text" name="text" placeholder="Type to add new tasks" />
-        </form>
-        {{/if}}
-    </header>
+            {{> loginButtons }}
 
-    <ul>
-        {{#each tasks}}
-            {{> task}}
-        {{/each}}
-    </ul>
-</div>
+            {{#if currentUser}}
+            <form class="new-task">
+                <input type="text" name="text" placeholder="Type to add new tasks" />
+            </form>
+            {{/if}}
+        </header>
+
+        <ul>
+            {{#each tasks}}
+                {{> task}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div id="CRUDcontent" class="container">
+        <h1>CRUD content</h1>
+        {{> crudContentForm}}
+        {{> crudContentList}}
+    </div>
+
 </body>
 
