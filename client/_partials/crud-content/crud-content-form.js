@@ -9,7 +9,7 @@ Template.crudContentForm.events({
         event.preventDefault();
 
         // Get value from form element
-        const target = event.target;
+        const target = event.target
         const title = target.title.value;
         const headline = target.headline.value;
         const body = target.article.value;
